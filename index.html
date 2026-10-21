@@ -1,140 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Velvet Intel</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Velvet Intel | Premium Industry Directory</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background Watermark -->
+    <div class="bg-watermark">THE VELVET</div>
 
-  <!-- Age Gate -->
-  <div id="age-gate">
-    <div class="age-box">
-      <img src="logo.jpg" alt="The Velvet Intel">
-      <h1>The Velvet Intel</h1>
-      <p>This website contains adult content.<br>Only for adults 18 years or older.</p>
-      <div class="age-buttons">
-        <button onclick="enterSite()">I am 18 or older — Enter</button>
-        <button class="exit" onclick="exitSite()">Exit</button>
-      </div>
+    <!-- Age Gate -->
+    <div id="age-gate" class="age-gate-container">
+        <div class="age-gate-content">
+            <img src="logo.jpg" alt="The Velvet Intel" class="age-gate-logo">
+            <h1 class="glow-text">THE VELVET INTEL</h1>
+            <p>This website contains adult material. You must be 18 years or older to enter.</p>
+            <div class="age-gate-buttons">
+                <button id="btn-enter" class="btn-primary">I am 18 or older — Enter</button>
+                <button id="btn-exit" class="btn-secondary">Exit</button>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Main Site -->
-  <div id="main-site" style="display: none;">
-    <header>
-      <div class="logo">
-        <a href="index.html"><img src="logo.jpg" alt="The Velvet Intel"></a>
-      </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="studios.html">Studios</a>
-        <a href="performers.html">Performers</a>
-        <a href="about.html">About</a>
-      </nav>
-    </header>
+    <!-- Main Content (Hidden until Age Gate is passed) -->
+    <div id="main-content" style="display: none;">
+        <!-- Header -->
+        <header class="glass-header">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Logo" class="nav-logo">
+                <span class="glow-text-small">THE VELVET</span>
+            </div>
+            <nav class="desktop-nav">
+                <a href="#">Home</a>
+                <a href="#">Studios</a>
+                <a href="#">Performers</a>
+                <a href="#">Scenes</a>
+                <a href="#">Categories</a>
+                <a href="#">About</a>
+            </nav>
+        </header>
 
-    <main>
+        <!-- Featured Networks -->
+        <section class="section-container">
+            <h2 class="section-title">Featured Networks</h2>
+            <div class="horizontal-scroll" id="featured-scroll">
+                <div class="card premium-card">
+                    <h3>Vixen Media Group</h3>
+                    <p>Vixen, Blacked, Tushy, Deeper</p>
+                </div>
+                <div class="card premium-card">
+                    <h3>Brazzers</h3>
+                    <p>The World's Best HD Porn</p>
+                </div>
+                <div class="card premium-card">
+                    <h3>Naughty America</h3>
+                    <p>Nobody Does It Better</p>
+                </div>
+                <div class="card premium-card">
+                    <h3>Evil Angel</h3>
+                    <p>Director Driven</p>
+                </div>
+            </div>
+        </section>
 
-      <!-- Hero -->
-      <section class="hero">
-        <h1>The Modern Adult Database</h1>
-        <p>Studios • Performers • Scenes — Organized with elegance</p>
-      </section>
+        <!-- Live Releases -->
+        <section class="section-container">
+            <h2 class="section-title">Live Releases <span class="live-dot"></span></h2>
+            <div class="horizontal-scroll">
+                <div class="card scene-card">
+                    <div class="card-image-placeholder">Scene Image</div>
+                    <h4>Midnight Seduction</h4>
+                    <p class="studio-name">Vixen</p>
+                    <p class="performers">Mia & Lena</p>
+                </div>
+                <div class="card scene-card">
+                    <div class="card-image-placeholder">Scene Image</div>
+                    <h4>Velvet Dreams</h4>
+                    <p class="studio-name">Deeper</p>
+                    <p class="performers">Angela</p>
+                </div>
+                <div class="card scene-card">
+                    <div class="card-image-placeholder">Scene Image</div>
+                    <h4>Pure Elegance</h4>
+                    <p class="studio-name">Tushy</p>
+                    <p class="performers">Kenzie</p>
+                </div>
+            </div>
+        </section>
 
-      <!-- Featured Networks -->
-      <section class="section">
-        <h2>Featured Networks</h2>
-        <div class="card-grid">
-          <div class="card featured">
-            <h3>Vixen Media Group</h3>
-            <p>Vixen • Blacked • Tushy • Deeper • Slayed</p>
-            <span class="tag">Premium</span>
-          </div>
-          <div class="card featured">
-            <h3>Brazzers</h3>
-            <p>One of the most popular mainstream networks</p>
-            <span class="tag">Popular</span>
-          </div>
-          <div class="card featured">
-            <h3>Naughty America</h3>
-            <p>Reality style & VR focused content</p>
-            <span class="tag">Popular</span>
-          </div>
-          <div class="card featured">
-            <h3>Evil Angel</h3>
-            <p>Hardcore & director-driven gonzo</p>
-            <span class="tag">Gonzo</span>
-          </div>
-          <div class="card featured">
-            <h3>TeamSkeet</h3>
-            <p>Young & amateur style network</p>
-            <span class="tag">Network</span>
-          </div>
-          <div class="card featured">
-            <h3>Jules Jordan</h3>
-            <p>High intensity premium gonzo</p>
-            <span class="tag">Gonzo</span>
-          </div>
-        </div>
-      </section>
+        <!-- Quick Categories -->
+        <section class="section-container">
+            <h2 class="section-title">Quick Categories</h2>
+            <div class="category-pills">
+                <span class="pill">Hardcore</span>
+                <span class="pill">Amateur</span>
+                <span class="pill">VR</span>
+                <span class="pill">MILF</span>
+                <span class="pill">Lesbian</span>
+                <span class="pill">Interracial</span>
+            </div>
+        </section>
 
-      <!-- Quick Categories -->
-      <section class="section">
-        <h2>Quick Categories</h2>
-        <div class="categories">
-          <span class="cat">Interracial</span>
-          <span class="cat">Anal</span>
-          <span class="cat">Lesbian</span>
-          <span class="cat">Hardcore</span>
-          <span class="cat">VR</span>
-          <span class="cat">MILF</span>
-          <span class="cat">Amateur</span>
-          <span class="cat">Young</span>
-          <span class="cat">Threesome</span>
-          <span class="cat">Rough</span>
-        </div>
-      </section>
+        <!-- Top Velvet Angels -->
+        <section class="section-container">
+            <h2 class="section-title">Top Velvet Angels</h2>
+            <div class="horizontal-scroll">
+                <div class="card angel-card">
+                    <div class="card-image-placeholder">Model Image</div>
+                    <h3>Elena</h3>
+                    <p>Elegance redefined</p>
+                </div>
+                <div class="card angel-card">
+                    <div class="card-image-placeholder">Model Image</div>
+                    <h3>Sophia</h3>
+                    <p>The new standard</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
-      <!-- Top Velvet Angels -->
-      <section class="section">
-        <h2>Top Velvet Angels</h2>
-        <div class="card-grid">
-          <div class="card">
-            <h3>Riley Reid</h3>
-            <p>Iconic & highly popular performer</p>
-          </div>
-          <div class="card">
-            <h3>Abella Danger</h3>
-            <p>Known for intense energetic scenes</p>
-          </div>
-          <div class="card">
-            <h3>Angela White</h3>
-            <p>Award-winning versatile performer</p>
-          </div>
-          <div class="card">
-            <h3>Emily Willis</h3>
-            <p>Popular in premium productions</p>
-          </div>
-          <div class="card">
-            <h3>Gia Derza</h3>
-            <p>Known for strong hardcore scenes</p>
-          </div>
-          <div class="card">
-            <h3>Violet Myers</h3>
-            <p>Rising popularity in recent years</p>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <p>© 2026 The Velvet Intel • Directory only • We do not host any videos</p>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
