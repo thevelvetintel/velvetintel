@@ -69,10 +69,11 @@ body {
   border-radius: 50%;
   margin-bottom: 20px;
   filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.4));
+  object-fit: cover;
 }
 
 .glow-text {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   color: #3b82f6;
   margin-bottom: 14px;
   letter-spacing: 2px;
@@ -138,7 +139,7 @@ body {
 
 .brand-name {
   font-family: 'Cinzel', serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #3b82f6;
   letter-spacing: 1.5px;
   font-weight: 600;
@@ -172,10 +173,10 @@ body {
   font-size: 28px;
   color: #60a5fa;
   opacity: 0;
-  transition: opacity 0.3s ease;
   background: #111;
+  transition: opacity 0.3s ease;
   font-weight: 300;
-  text-shadow: 0 0 12px rgba(96, 165, 250, 0.6);
+  text-shadow: 0 0 14px rgba(96, 165, 250, 0.7);
 }
 
 .menu-btn.active img {
@@ -195,11 +196,11 @@ body {
   height: 100vh;
   background: #0f0f0f;
   border-left: 1px solid #1f1f1f;
-  z-index: 150;
-  padding: 80px 30px 40px;
+  z-index: 200;
+  padding: 90px 28px 40px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 24px;
   transition: right 0.35s ease;
 }
 
@@ -210,7 +211,7 @@ body {
 .side-menu a {
   color: #ccc;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-family: 'Cinzel', serif;
   letter-spacing: 1px;
   transition: color 0.2s;
@@ -223,8 +224,8 @@ body {
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 140;
+  background: rgba(0,0,0,0.55);
+  z-index: 150;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -242,7 +243,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   margin-bottom: 12px;
   color: #fff;
   font-weight: 500;
@@ -261,7 +262,7 @@ body {
 }
 
 .section-title {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   margin-bottom: 22px;
   color: #fff;
   font-weight: 500;
@@ -269,19 +270,28 @@ body {
   padding-left: 12px;
 }
 
+.section-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-link:hover {
+  color: #60a5fa;
+}
+
 /* Cards */
-.card-grid, .horizontal-scroll {
+.horizontal-scroll {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 .premium-card, .scene-card, .angel-card {
   background: #111;
   border: 1px solid #1c1c1c;
   border-radius: 14px;
-  padding: 22px;
+  padding: 20px;
   min-width: 240px;
   flex-shrink: 0;
   transition: all 0.3s ease;
@@ -389,7 +399,7 @@ body {
   visibility: visible;
 }
 
-/* Menu Button Toggle */
+/* Menu Button (Signature ↔ X) */
 .menu-btn {
   width: 42px;
   height: 42px;
@@ -404,7 +414,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .menu-btn .close-x {
@@ -417,7 +427,8 @@ body {
   color: #60a5fa;
   opacity: 0;
   background: #111;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
+  font-weight: 300;
   text-shadow: 0 0 12px rgba(96,165,250,0.7);
 }
 
@@ -440,7 +451,7 @@ body {
 }
 
 .site-footer p {
-  margin: 4px 0;
+  margin: 5px 0;
 }
 
 /* Mobile */
@@ -449,6 +460,9 @@ body {
     padding: 12px 4%;
   }
   .glow-text-small {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+  }
+  .card {
+    min-width: 220px;
   }
 }
