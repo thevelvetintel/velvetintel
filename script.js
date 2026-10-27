@@ -1,52 +1,65 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* ========================================
+   THE VELVET CIRCLE - Main Script
+   ======================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ===== 1. AGE GATE =====
+  // Agar user pehle se verify kar chuka hai (isi browser session mein)
+  // to age gate mat dikhao
   const ageGate = document.getElementById("age-gate");
   const mainContent = document.getElementById("main-content");
-  const btnEnter = document.getElementById("btn-enter");
-  const btnExit = document.getElementById("btn-exit");
-  const menuBtn = document.getElementById("menu-btn");
-  const sideMenu = document.getElementById("side-menu");
-  const menuOverlay = document.getElementById("menu-overlay");
 
-  // Age Gate - remember for this browser session
   if (sessionStorage.getItem("ageVerified") === "true") {
     if (ageGate) ageGate.style.display = "none";
     if (mainContent) mainContent.style.display = "block";
   }
 
+  // Enter button
+  const btnEnter = document.getElementById("btn-enter");
   if (btnEnter) {
-    btnEnter.addEventListener("click", () => {
+    btnEnter.addEventListener("click", function () {
       ageGate.style.transition = "opacity 0.4s ease";
       ageGate.style.opacity = "0";
-      setTimeout(() => {
+
+      setTimeout(function () {
         ageGate.style.display = "none";
         mainContent.style.display = "block";
+        // Is browser session ke liye yaad rakh lo
         sessionStorage.setItem("ageVerified", "true");
       }, 400);
     });
   }
 
+  // Exit button → Google pe bhej do
+  const btnExit = document.getElementById("btn-exit");
   if (btnExit) {
-    btnExit.addEventListener("click", () => {
+    btnExit.addEventListener("click", function () {
       window.location.href = "https://www.google.com";
     });
   }
 
-  // Menu Toggle (Signature ↔ X)
+  // ===== 2. MENU (Signature ↔ X) =====
+  const menuBtn = document.getElementById("menu-btn");
+  const sideMenu = document.getElementById("side-menu");
+  const menuOverlay = document.getElementById("menu-overlay");
+
   function openMenu() {
-    if (sideMenu) sideMenu.classList.add("open");
-    if (menuOverlay) menuOverlay.classList.add("active");
-    if (menuBtn) menuBtn.classList.add("active");
+    sideMenu.classList.add("open");
+    menuOverlay.classList.add("active");
+    menuBtn.classList.add("active"); // isse X dikhega
   }
 
   function closeMenu() {
-    if (sideMenu) sideMenu.classList.remove("open");
-    if (menuOverlay) menuOverlay.classList.remove("active");
-    if (menuBtn) menuBtn.classList.remove("active");
+    sideMenu.classList.remove("open");
+    menuOverlay.classList.remove("active");
+    menuBtn.classList.remove("active"); // isse signature pic wapas
   }
 
   if (menuBtn) {
-    menuBtn.addEventListener("click", () => {
-      if (sideMenu && sideMenu.classList.contains("open")) {
+    menuBtn.addEventListener("click", function () {
+      // Agar menu pehle se khula hai to band karo, warna kholo
+      if (sideMenu.classList.contains("open")) {
         closeMenu();
       } else {
         openMenu();
@@ -54,28 +67,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Overlay pe click karne se bhi menu band ho
   if (menuOverlay) {
     menuOverlay.addEventListener("click", closeMenu);
   }
 
-  // Auto scroll for Featured Networks
+  // ===== 3. AUTO SCROLL =====
+  // Featured Networks
   const featuredScroll = document.getElementById("featured-scroll");
   if (featuredScroll) {
-    let scrollPos = 0;
-    setInterval(() => {
-      scrollPos += 280;
-      if (scrollPos >= featuredScroll.scrollWidth - featuredScroll.clientWidth) {
-        scrollPos = 0;
+    let pos = 0;
+    setInterval(function () {
+      pos += 280;
+      if (pos >= featuredScroll.scrollWidth - featuredScroll.clientWidth) {
+        pos = 0; // last tak pahunch gaya to shuru se
       }
-      featuredScroll.scrollTo({ left: scrollPos, behavior: "smooth" });
-    }, 3500);
+      featuredScroll.scrollTo({ left: pos, behavior: "smooth" });
+    }, 3500); // har 3.5 second
   }
 
-  // Auto scroll for Velvet Vixens
+  // Velvet Vixens
   const vixensScroll = document.getElementById("vixens-scroll");
   if (vixensScroll) {
     let vPos = 0;
-    setInterval(() => {
+    setInterval(function () {
       vPos += 260;
       if (vPos >= vixensScroll.scrollWidth - vixensScroll.clientWidth) {
         vPos = 0;
@@ -83,4 +98,5 @@ document.addEventListener("DOMContentLoaded", () => {
       vixensScroll.scrollTo({ left: vPos, behavior: "smooth" });
     }, 4000);
   }
+
 });
