@@ -132,7 +132,7 @@ body {
   border-bottom: 1px solid #1a1a1a;
   position: sticky;
   top: 0;
-  z-index: 200;
+  z-index: 300;
   backdrop-filter: blur(14px);
 }
 
@@ -166,6 +166,7 @@ body {
   cursor: pointer;
   position: relative;
   border: 1px solid #2a2a2a;
+  z-index: 310;
 }
 
 .menu-btn img {
