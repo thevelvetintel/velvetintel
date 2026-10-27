@@ -8,10 +8,9 @@
 </head>
 <body>
 
-  <!-- Watermark -->
   <div class="bg-watermark">THE VELVET</div>
 
-  <!-- Age Gate -->
+  <!-- Age Gate (only once) -->
   <div id="age-gate" class="age-gate-container">
     <div class="age-gate-content">
       <img src="logo.jpg" alt="The Velvet Circle" class="age-gate-logo">
@@ -27,7 +26,6 @@
   <!-- Main Content -->
   <div id="main-content" style="display: none;">
 
-    <!-- Header -->
     <header class="glass-header">
       <div class="logo-container">
         <img src="logo.jpg" alt="Logo" class="nav-logo">
@@ -36,12 +34,13 @@
 
       <!-- Signature Menu Button -->
       <div class="menu-btn" id="menu-btn">
-        <img src="logo.jpg" alt="Menu" class="signature-btn" id="signature-btn">
+        <img src="logo.jpg" alt="Menu" id="signature-img">
         <span class="close-x" id="close-x">×</span>
       </div>
     </header>
 
-    <!-- Mobile / Side Menu -->
+    <!-- Side Menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
     <div class="side-menu" id="side-menu">
       <a href="index.html">Home</a>
       <a href="studios.html">Studios</a>
@@ -52,7 +51,9 @@
 
     <!-- Featured Networks -->
     <section class="section-container">
-      <h2 class="section-title">Featured Networks</h2>
+      <h2 class="section-title">
+        <a href="studios.html" class="section-link">Featured Networks</a>
+      </h2>
       <div class="horizontal-scroll" id="featured-scroll">
         <div class="card premium-card">
           <h3>Vixen Media Group</h3>
@@ -114,8 +115,10 @@
 
     <!-- Quick Categories -->
     <section class="section-container">
-      <h2 class="section-title">Quick Categories</h2>
-      <div class="category-pills" id="category-pills">
+      <h2 class="section-title">
+        <a href="categories.html" class="section-link">Quick Categories</a>
+      </h2>
+      <div class="category-pills">
         <span class="pill">Hardcore</span>
         <span class="pill">Amateur</span>
         <span class="pill">VR</span>
@@ -127,7 +130,9 @@
 
     <!-- Velvet Vixens -->
     <section class="section-container">
-      <h2 class="section-title">Velvet Vixens</h2>
+      <h2 class="section-title">
+        <a href="vixens.html" class="section-link">Velvet Vixens</a>
+      </h2>
       <div class="horizontal-scroll" id="vixens-scroll">
         <div class="card angel-card">
           <div class="card-image-placeholder">Photo</div>
@@ -152,12 +157,10 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <p>© 2026 The Velvet Circle. All Rights Reserved.</p>
       <p>This is a directory only. We do not host, stream, or upload any videos.</p>
     </footer>
-
   </div>
 
   <script src="script.js"></script>
