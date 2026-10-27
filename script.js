@@ -71,7 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (menuOverlay) {
     menuOverlay.addEventListener("click", closeMenu);
   }
+  const menuClose = document.getElementById("menu-close");
 
+if (menuClose) {
+  menuClose.addEventListener("click", closeMenu);
+}
   // ===== 3. AUTO SCROLL =====
   // Featured Networks
   const featuredScroll = document.getElementById("featured-scroll");
