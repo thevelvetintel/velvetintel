@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sideMenu = document.getElementById("side-menu");
   const menuOverlay = document.getElementById("menu-overlay");
 
-  // Age Gate
+  // Age Gate - remember for this browser session
   if (sessionStorage.getItem("ageVerified") === "true") {
     if (ageGate) ageGate.style.display = "none";
     if (mainContent) mainContent.style.display = "block";
@@ -33,20 +33,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Menu Toggle (Signature ↔ X)
   function openMenu() {
-    sideMenu.classList.add("open");
-    menuOverlay.classList.add("active");
-    menuBtn.classList.add("active");
+    if (sideMenu) sideMenu.classList.add("open");
+    if (menuOverlay) menuOverlay.classList.add("active");
+    if (menuBtn) menuBtn.classList.add("active");
   }
 
   function closeMenu() {
-    sideMenu.classList.remove("open");
-    menuOverlay.classList.remove("active");
-    menuBtn.classList.remove("active");
+    if (sideMenu) sideMenu.classList.remove("open");
+    if (menuOverlay) menuOverlay.classList.remove("active");
+    if (menuBtn) menuBtn.classList.remove("active");
   }
 
   if (menuBtn) {
     menuBtn.addEventListener("click", () => {
-      if (sideMenu.classList.contains("open")) {
+      if (sideMenu && sideMenu.classList.contains("open")) {
         closeMenu();
       } else {
         openMenu();
