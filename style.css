@@ -423,18 +423,30 @@ pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
-.menu-btn .close-x {
+.menu-close {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  color: #60a5fa;
-  opacity: 0;
-  background: #111;
-  transition: opacity 0.3s ease;
-  text-shadow: 0 0 12px rgba(96, 165, 250, 0.7);
+  top: 18px;
+  right: 20px;
+  font-size: 34px;
+  font-weight: 300;
+  color: #c0c0c0;                    /* steel / silver color */
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+  text-shadow: 
+    0 0 8px rgba(155, 27, 48, 0.7),  /* velvet red glow */
+    0 0 16px rgba(155, 27, 48, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.8);    /* slight depth */
+  transition: all 0.25s ease;
+}
+
+.menu-close:hover {
+  color: #e8e8e8;
+  text-shadow: 
+    0 0 12px rgba(155, 27, 48, 0.9),
+    0 0 24px rgba(155, 27, 48, 0.5),
+    0 1px 3px rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
 }
 
 .menu-btn.active img {
