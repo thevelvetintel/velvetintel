@@ -1,17 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap');
+/* ========================================
+   THE VELVET CIRCLE - Main Stylesheet
+   ======================================== */
 
+/* Google Fonts - Cinzel for headings, Inter for body */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ===== COLORS (ek hi jagah se control) ===== */
 :root {
-  --bg-dark: #0a0a0a;
-  --bg-card: #111111;
-  --blue: #2563eb;
-  --blue-glow: #3b82f6;
-  --blue-light: #60a5fa;
-  --red: #9b1b30;
-  --text: #e5e5e5;
-  --muted: #888888;
-  --border: #1c1c1c;
+  --bg: #0a0a0a;           /* pure dark background */
+  --bg-card: #111111;      /* cards background */
+  --blue: #3b82f6;         /* electric royal blue */
+  --blue-dark: #2563eb;    /* darker blue for buttons */
+  --blue-light: #60a5fa;   /* light blue for hover */
+  --red: #9b1b30;          /* deep red velvet */
+  --text: #e5e5e5;         /* main text */
+  --muted: #888888;        /* secondary text */
+  --border: #1c1c1c;       /* borders */
+  --header-bg: rgba(10, 10, 10, 0.95);
 }
 
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -19,31 +27,31 @@
 }
 
 body {
-  background-color: var(--bg-dark);
+  background-color: var(--bg);
   color: var(--text);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  position: relative;
   min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* Watermark */
+/* ===== WATERMARK (diagonal, very light) ===== */
 .bg-watermark {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-32deg);
   font-family: 'Cinzel', serif;
-  font-size: 16vw;
+  font-size: 15vw;
   color: rgba(255, 255, 255, 0.025);
   z-index: 0;
   pointer-events: none;
   white-space: nowrap;
-  letter-spacing: 8px;
+  letter-spacing: 10px;
 }
 
-/* Age Gate */
+/* ===== AGE GATE (sirf homepage pe) ===== */
 .age-gate-container {
   position: fixed;
   inset: 0;
@@ -68,23 +76,22 @@ body {
   height: 90px;
   border-radius: 50%;
   margin-bottom: 20px;
-  filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.4));
   object-fit: cover;
+  filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.4));
 }
 
 .glow-text {
-  font-size: 2.1rem;
-  color: #3b82f6;
+  font-size: 2rem;
+  color: var(--blue);
   margin-bottom: 14px;
   letter-spacing: 2px;
   font-weight: 600;
 }
 
 .age-gate-content p {
-  color: #999;
-  margin-bottom: 30px;
+  color: var(--muted);
+  margin-bottom: 28px;
   font-size: 0.95rem;
-  line-height: 1.5;
 }
 
 .age-gate-buttons {
@@ -94,29 +101,34 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, var(--blue-dark), #1d4ed8);
   color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
   box-shadow: 0 4px 18px rgba(37, 99, 235, 0.35);
-}
-
-.btn-primary:hover {
-  box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
-  transform: translateY(-1px);
 }
 
 .btn-secondary {
   background: transparent;
   color: #777;
+  padding: 14px 20px;
   border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 .glass-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 14px 5%;
-  background: rgba(9, 9, 9, 0.95);
+  background: var(--header-bg, rgba(10, 10, 10, 0.95));
   border-bottom: 1px solid #1a1a1a;
   position: sticky;
   top: 0;
@@ -139,13 +151,13 @@ body {
 
 .brand-name {
   font-family: 'Cinzel', serif;
-  font-size: 1.2rem;
-  color: #3b82f6;
+  font-size: 1.15rem;
+  color: var(--blue);
   letter-spacing: 1.5px;
   font-weight: 600;
 }
 
-/* Signature Menu Button */
+/* ===== MENU BUTTON (Signature ↔ X) ===== */
 .menu-btn {
   width: 42px;
   height: 42px;
@@ -154,7 +166,6 @@ body {
   cursor: pointer;
   position: relative;
   border: 1px solid #2a2a2a;
-  transition: all 0.3s ease;
 }
 
 .menu-btn img {
@@ -170,13 +181,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
-  color: #60a5fa;
+  font-size: 26px;
+  color: var(--blue-light, #60a5fa);
   opacity: 0;
   background: #111;
   transition: opacity 0.3s ease;
-  font-weight: 300;
-  text-shadow: 0 0 14px rgba(96, 165, 250, 0.7);
+  text-shadow: 0 0 12px rgba(96, 165, 250, 0.7);
 }
 
 .menu-btn.active img {
@@ -218,13 +228,13 @@ body {
 }
 
 .side-menu a:hover {
-  color: #60a5fa;
+  color: var(--blue-light, #60a5fa);
 }
 
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
   z-index: 150;
   opacity: 0;
   visibility: hidden;
@@ -239,18 +249,18 @@ body {
 /* Hero */
 .hero {
   text-align: center;
-  padding: 70px 20px 50px;
+  padding: 70px 20px 45px;
 }
 
 .hero h1 {
   font-size: 2.2rem;
   margin-bottom: 12px;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero p {
-  color: #777;
+  color: var(--muted, #888);
   font-size: 1.05rem;
 }
 
@@ -266,7 +276,7 @@ body {
   margin-bottom: 22px;
   color: #fff;
   font-weight: 500;
-  border-left: 3px solid #3b82f6;
+  border-left: 3px solid var(--blue, #3b82f6);
   padding-left: 12px;
 }
 
@@ -276,7 +286,7 @@ body {
 }
 
 .section-link:hover {
-  color: #60a5fa;
+  color: var(--blue-light, #60a5fa);
 }
 
 /* Cards */
@@ -287,9 +297,11 @@ body {
   padding-bottom: 12px;
 }
 
-.premium-card, .scene-card, .angel-card {
-  background: #111;
-  border: 1px solid #1c1c1c;
+.premium-card,
+.scene-card,
+.angel-card {
+  background: var(--bg-card, #111);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 20px;
   min-width: 240px;
@@ -297,10 +309,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.premium-card:hover, .scene-card:hover, .angel-card:hover {
-  border-color: #3b82f6;
+.premium-card:hover,
+.scene-card:hover,
+.angel-card:hover {
+  border-color: var(--blue);
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
 .card-image-placeholder {
@@ -314,17 +328,6 @@ body {
   justify-content: center;
   color: #444;
   font-size: 0.85rem;
-}
-
-.studio-name {
-  color: #60a5fa !important;
-  font-size: 0.85rem !important;
-  margin-top: 4px;
-}
-
-.performers {
-  color: #777 !important;
-  font-size: 0.85rem !important;
 }
 
 /* Categories */
@@ -346,8 +349,8 @@ body {
 }
 
 .pill:hover {
-  border-color: #3b82f6;
-  color: #60a5fa;
+  border-color: var(--blue);
+  color: var(--blue-light, #60a5fa);
 }
 
 /* Side Menu */
@@ -387,7 +390,7 @@ body {
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
   z-index: 150;
   opacity: 0;
   visibility: hidden;
@@ -428,8 +431,7 @@ body {
   opacity: 0;
   background: #111;
   transition: opacity 0.3s ease;
-  font-weight: 300;
-  text-shadow: 0 0 12px rgba(96,165,250,0.7);
+  text-shadow: 0 0 12px rgba(96, 165, 250, 0.7);
 }
 
 .menu-btn.active img {
@@ -447,7 +449,7 @@ body {
   color: #555;
   font-size: 0.85rem;
   border-top: 1px solid #1a1a1a;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .site-footer p {
@@ -459,10 +461,16 @@ body {
   .glass-header {
     padding: 12px 4%;
   }
+
   .glow-text-small {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
+
   .card {
     min-width: 220px;
+  }
+
+  .desktop-nav {
+    display: none;
   }
 }
