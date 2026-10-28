@@ -3,81 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Performers — The Velvet Intel</title>
+  <title>Velvet Vixens — The Velvet Circle</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="age-gate">
-    <div class="age-box">
-      <h1>The Velvet Intel</h1>
-      <p>This website contains adult content and is only for people who are 18 years or older.</p>
-      <div class="age-buttons">
-        <button onclick="enterSite()">I am 18 or older — Enter</button>
-        <button class="exit" onclick="exitSite()">Exit</button>
-      </div>
+  <div class="bg-watermark">THE VELVET</div>
+
+  <!-- Header -->
+  <header class="glass-header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="logo.jpg" alt="Logo" class="nav-logo">
+      </a>
+      <span class="brand-name">THE VELVET CIRCLE</span>
     </div>
+
+    <div class="menu-btn" id="menu-btn">
+      <img src="menu.png" alt="Menu">
+      <span class="close-x">×</span>
+    </div>
+  </header>
+
+  <!-- Side Menu -->
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <div class="side-menu" id="side-menu">
+    <div class="menu-close" id="menu-close">×</div>
+    <a href="index.html">Home</a>
+    <a href="studios.html">Studios</a>
+    <a href="categories.html">Categories</a>
+    <a href="vixens.html">Vixens</a>
+    <a href="about.html">We</a>
   </div>
 
-  <div id="main-site" style="display: none;">
-    <header>
-      <div class="logo">The Velvet Intel</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="studios.html">Studios</a>
-        <a href="performers.html">Performers</a>
-        <a href="about.html">About</a>
-      </nav>
-    </header>
+  <!-- Page Content -->
+  <main>
+    <section class="hero">
+      <h1>Velvet Vixens</h1>
+      <p>Selected performers of the circle</p>
+    </section>
 
-    <main>
-      <section class="hero">
-        <h1>Performers</h1>
-        <p>Popular adult performers</p>
-      </section>
+    <section class="section-container">
+      <div class="vixen-grid">
 
-      <section class="section">
-        <div class="card-grid">
-          <div class="card">
-            <h3>Riley Reid</h3>
-            <p>Very popular performer</p>
+        <!-- Vixen Card -->
+        <div class="vixen-card">
+          <div class="vixen-photo">
+            <div class="card-image-placeholder">Photo</div>
           </div>
-          <div class="card">
-            <h3>Abella Danger</h3>
-            <p>Known for intense scenes</p>
-          </div>
-          <div class="card">
-            <h3>Lana Rhoades</h3>
-            <p>High profile performer</p>
-          </div>
-          <div class="card">
-            <h3>Angela White</h3>
-            <p>Award-winning performer</p>
-          </div>
-          <div class="card">
-            <h3>Emily Willis</h3>
-            <p>Popular in recent years</p>
-          </div>
-          <div class="card">
-            <h3>Gia Derza</h3>
-            <p>Known for intense style</p>
-          </div>
-          <div class="card">
-            <h3>Violet Myers</h3>
-            <p>Rising popularity</p>
-          </div>
-          <div class="card">
-            <h3>Kendra Sunderland</h3>
-            <p>Well-known performer</p>
+          <div class="vixen-info">
+            <h3>Elena</h3>
+            <p class="vixen-desc">Elegance redefined. Soft intensity with a quiet dominance.</p>
+            <div class="vixen-tags">
+              <span class="pill">Elegant</span>
+              <span class="pill">Intense</span>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer>
-      <p>© 2026 The Velvet Intel. Directory only. We do not host any videos.</p>
-    </footer>
-  </div>
+        <div class="vixen-card">
+          <div class="vixen-photo">
+            <div class="card-image-placeholder">Photo</div>
+          </div>
+          <div class="vixen-info">
+            <h3>Sophia</h3>
+            <p class="vixen-desc">The new standard. Clean, confident, and magnetic.</p>
+            <div class="vixen-tags">
+              <span class="pill">Confident</span>
+              <span class="pill">Premium</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="vixen-card">
+          <div class="vixen-photo">
+            <div class="card-image-placeholder">Photo</div>
+          </div>
+          <div class="vixen-info">
+            <h3>Luna</h3>
+            <p class="vixen-desc">Playful intensity. Light on the surface, deep underneath.</p>
+            <div class="vixen-tags">
+              <span class="pill">Playful</span>
+              <span class="pill">Bold</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="vixen-card">
+          <div class="vixen-photo">
+            <div class="card-image-placeholder">Photo</div>
+          </div>
+          <div class="vixen-info">
+            <h3>Aria</h3>
+            <p class="vixen-desc">Pure desire. Soft eyes, strong presence.</p>
+            <div class="vixen-tags">
+              <span class="pill">Soft</span>
+              <span class="pill">Powerful</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Velvet Cuts Section -->
+    <section class="section-container">
+      <h2 class="section-title">Velvet Cuts</h2>
+      <p style="color: #777; margin-bottom: 20px; font-size: 0.95rem;">Trending & legendary scenes</p>
+      
+      <div class="horizontal-scroll">
+        <div class="scene-card">
+          <div class="card-image-placeholder">Scene</div>
+          <h4>Midnight Seduction</h4>
+          <p class="studio-name">Vixen</p>
+        </div>
+        <div class="scene-card">
+          <div class="card-image-placeholder">Scene</div>
+          <h4>Velvet Dreams</h4>
+          <p class="studio-name">Deeper</p>
+        </div>
+        <div class="scene-card">
+          <div class="card-image-placeholder">Scene</div>
+          <h4>Pure Elegance</h4>
+          <p class="studio-name">Tushy</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 The Velvet Circle. All Rights Reserved.</p>
+    <p>This is a directory only. We do not host, stream, or upload any videos.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
