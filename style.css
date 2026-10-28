@@ -470,7 +470,41 @@ pointer-events: none;
 .site-footer p {
   margin: 5px 0;
 }
+/* ===== Studios Page - Vertical Cards ===== */
+.card-grid-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
+.studio-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 22px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.studio-card h3 {
+  color: var(--blue);
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.studio-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.studio-card:hover {
+  border-color: var(--blue);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
 /* Mobile */
 @media (max-width: 600px) {
   .glass-header {
