@@ -505,6 +505,65 @@ pointer-events: none;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
+/* ===== Vixens Page ===== */
+.vixen-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vixen-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.vixen-card:hover {
+  border-color: var(--blue);
+}
+
+.vixen-photo {
+  flex-shrink: 0;
+  width: 120px;
+}
+
+.vixen-photo .card-image-placeholder {
+  height: 140px;
+  margin-bottom: 0;
+}
+
+.vixen-info h3 {
+  color: var(--blue);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.vixen-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.vixen-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+  .vixen-card {
+    flex-direction: column;
+  }
+  .vixen-photo {
+    width: 100%;
+  }
+}
 /* Mobile */
 @media (max-width: 600px) {
   .glass-header {
