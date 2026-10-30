@@ -633,3 +633,36 @@ pointer-events: none;
   color: #e5e5e5 !important;
   text-decoration: none;
 }
+/* ===== Categories Page ===== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card h3 {
+  color: var(--blue);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.category-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.category-card:hover {
+  border-color: var(--blue);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+}
