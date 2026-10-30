@@ -582,3 +582,35 @@ pointer-events: none;
     display: none;
   }
 }
+/* ===== VMG / Studio Detail Page ===== */
+.studio-section {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.studio-main-card {
+  background: #0d0d0d;
+  border: 1px solid #1f1f1f;
+  border-radius: 14px;
+  padding: 28px 24px;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.studio-main-card h2 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.studio-main-card p {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+.studio-scenes {
+  padding-left: 4px;
+}
