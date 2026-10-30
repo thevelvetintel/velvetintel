@@ -648,7 +648,27 @@ pointer-events: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
+/* ===== About Page ===== */
+.about-content {
+  max-width: 700px;
+}
 
+.about-block {
+  margin-bottom: 40px;
+}
+
+.about-block h2 {
+  color: var(--blue);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.about-block p {
+  color: #aaa;
+  font-size: 1rem;
+  line-height: 1.7;
+}
 .category-card h3 {
   color: var(--blue);
   font-size: 1.15rem;
