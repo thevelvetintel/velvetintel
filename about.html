@@ -3,60 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — The Velvet Intel</title>
+  <title>We — The Velvet Circle</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="age-gate">
-    <div class="age-box">
-      <h1>The Velvet Intel</h1>
-      <p>This website contains adult content and is only for people who are 18 years or older.</p>
-      <div class="age-buttons">
-        <button onclick="enterSite()">I am 18 or older — Enter</button>
-        <button class="exit" onclick="exitSite()">Exit</button>
-      </div>
+  <div class="bg-watermark">THE VELVET</div>
+
+  <!-- Header -->
+  <header class="glass-header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="logo.jpg" alt="Logo" class="nav-logo">
+      </a>
+      <span class="brand-name">THE VELVET CIRCLE</span>
     </div>
+
+    <div class="menu-btn" id="menu-btn">
+      <img src="menu.png" alt="Menu">
+      <span class="close-x">×</span>
+    </div>
+  </header>
+
+  <!-- Side Menu -->
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <div class="side-menu" id="side-menu">
+    <div class="menu-close" id="menu-close">×</div>
+    <a href="index.html">Home</a>
+    <a href="studios.html">Studios</a>
+    <a href="categories.html">Categories</a>
+    <a href="vixens.html">Vixens</a>
+    <a href="about.html">We</a>
   </div>
 
-  <div id="main-site" style="display: none;">
-    <header>
-      <div class="logo">The Velvet Intel</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="studios.html">Studios</a>
-        <a href="performers.html">Performers</a>
-        <a href="about.html">About</a>
-      </nav>
-    </header>
+  <!-- Page Content -->
+  <main>
+    <section class="hero">
+      <h1>We</h1>
+      <p>About The Velvet Circle</p>
+    </section>
 
-    <main>
-      <section class="hero">
-        <h1>About The Velvet Intel</h1>
-        <p>A clean adult content directory</p>
-      </section>
+    <section class="section-container about-content">
+      
+      <div class="about-block">
+        <h2>What is this?</h2>
+        <p>
+          The Velvet Circle is an elegant, modern directory of adult studios, performers, and scenes. 
+          We organize the industry’s best networks in a clean, cinematic interface — without hosting any videos.
+        </p>
+      </div>
 
-      <section class="section">
-        <div class="card" style="max-width: 700px; margin: 0 auto;">
-          <h3>What is this site?</h3>
-          <p style="margin-top: 15px; color: #aaa; line-height: 1.7;">
-            The Velvet Intel is a simple directory focused on adult studios and performers. 
-            We only provide organized information and links to official sources.
-          </p>
-          <p style="margin-top: 15px; color: #aaa; line-height: 1.7;">
-            We do <strong>not</strong> host, stream, or upload any videos.
-          </p>
-          <p style="margin-top: 15px; color: #aaa; line-height: 1.7;">
-            This project is built to be clean, modern, and easy to browse.
-          </p>
-        </div>
-      </section>
-    </main>
+      <div class="about-block">
+        <h2>Our Approach</h2>
+        <p>
+          We focus on structure, clarity, and aesthetics. 
+          Instead of cluttered databases, we present studios and performers in a refined, easy-to-browse format.
+        </p>
+      </div>
 
-    <footer>
-      <p>© 2026 The Velvet Intel. Directory only. We do not host any videos.</p>
-    </footer>
-  </div>
+      <div class="about-block">
+        <h2>Important</h2>
+        <p>
+          This is a <strong>directory only</strong>. 
+          We do not host, stream, upload, or store any adult videos. 
+          All content belongs to their respective studios and copyright holders.
+        </p>
+      </div>
+
+      <div class="about-block">
+        <h2>Contact</h2>
+        <p>
+          For takedown requests, corrections, or partnership inquiries, reach out at:
+          <br><br>
+          <span style="color: #60a5fa;">contact@thevelvetintel.com</span>
+          <br><br>
+          <em>(Replace with your real email when ready)</em>
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 The Velvet Circle. All Rights Reserved.</p>
+    <p>This is a directory only. We do not host, stream, or upload any videos.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
